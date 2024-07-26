@@ -42,7 +42,7 @@ const PollForm = ({ addPoll }) => {
   return (
     <form
       onSubmit={createPoll}
-      className="bg-gray-500 shadow-lg rounded-lg p-8 mb-8 transition-transform transform hover:scale-105 duration-300"
+      className="bg-gray-500 shadow-lg transition-transform transform hover:scale-105 duration-300 rounded-2xl p-8 mb-8 transition-transform transform hover:scale-105 duration-300"
     >
       <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">
         Create a New Poll

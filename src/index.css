@@ -11,3 +11,65 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  white-space: nowrap;
+  display: inline-block;
+  animation: marquee 30s linear infinite;
+}
+
+/* Keyframes for vertical marquee with slower speed */
+@keyframes marquee-vertical {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
+/* Animation class for vertical scrolling with slower speed */
+.animate-marquee-vertical {
+  display: flex;
+  flex-direction: column;
+  animation: marquee-vertical 20s linear infinite; /* Adjusted duration for slower speed */
+}
+
+/* Container for scrolling announcements */
+.announcement-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Announcement Board Container */
+.announcement-board {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Heading Section Styling */
+.bg-red-600 {
+  background-color: #c62828; /* Dark red background for heading */
+}
+
+/* Rounded corners for heading box */
+.rounded-lg {
+  border-radius: 0.5rem; /* Adjusted radius for slight rounding */
+}
+
+/* Blinking effect for heading only */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.animate-blink {
+  animation: blink 1s step-start infinite;
+}

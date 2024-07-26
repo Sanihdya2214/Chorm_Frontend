@@ -6,7 +6,7 @@ const GoogleCalendarWidget = () => {
   const calendarUrl = `https://calendar.google.com/calendar/embed?src=${calendarId}`;
 
   return (
-    <div className="p-4 max-w-4xl mx-auto bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 shadow-xl rounded-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
+    <div className="p-4 max-w-4xl mx-auto bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 shadow-xl rounded-2xl overflow-hidden transition-transform transform hover:scale-105 duration-300">
       <h2 className="text-2xl font-semibold mb-4 text-gray-800 text-center">
         Google Calendar Widget
       </h2>

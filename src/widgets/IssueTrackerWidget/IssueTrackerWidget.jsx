@@ -35,7 +35,7 @@ const App = () => {
   };
 
   return (
-    <div className="max-w-sm mx-auto bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-lg shadow-lg">
+    <div className="  w-70 h-96  mx-auto transition-transform transform hover:scale-105 duration-300 bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-2xl shadow-lg">
       <h1 className="text-2xl font-bold mb-6 text-center text-white">
         Issue Tracker
       </h1>

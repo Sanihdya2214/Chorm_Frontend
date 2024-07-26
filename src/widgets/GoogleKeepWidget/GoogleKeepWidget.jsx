@@ -29,7 +29,7 @@ const GoogleKeepWidget = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-600 shadow-lg rounded-lg p-4 m-4 text-center flex flex-col items-center w-full max-w-sm">
+    <div className="bg-gradient-to-r transition-transform transform hover:scale-105 duration-300 from-blue-900 via-blue-700 to-blue-600 shadow-lg rounded-2xl p-4 m-4 text-center flex flex-col items-center w-70 h-96">
       <h2 className="text-xl font-bold mb-2 text-white italic">
         Google Keep Widget
       </h2>
@@ -38,7 +38,7 @@ const GoogleKeepWidget = () => {
           value={newNote}
           onChange={(e) => setNewNote(e.target.value)}
           placeholder="Type your note here..."
-          className="w-full min-h-[4rem] max-h-24 p-2 mb-2 rounded-lg border border-gray-300 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
+          className="w-full min-h-[4rem] max-h-24 p-2 mb-2 rounded-lg border border-gray-300 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none transition duration-300 ease-in-out transform hover:scale-105"
           rows="1"
         />
         <input
@@ -59,7 +59,9 @@ const GoogleKeepWidget = () => {
           {message}
         </div>
       )}
-      <div className="w-full flex flex-wrap gap-2">
+      <div className="w-full flex flex-wrap gap-2 overflow-y-auto max-h-[calc(100%-10rem)]">
+        {" "}
+        {/* Adjust max height as needed */}
         {notes.map((note) => (
           <div
             key={note.id}

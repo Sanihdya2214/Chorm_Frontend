@@ -20,10 +20,14 @@ const GoogleMeetWidget = () => {
   };
 
   return (
-    <div className="max-w-sm mx-auto bg-gradient-to-r from-blue-500 to-blue-900 shadow-xl rounded-2xl overflow-hidden my-6">
+    <div className="max-w-m  mx-auto w-70 h-96 transition-transform transform hover:scale-105 duration-300 bg-gradient-to-r from-blue-500 to-blue-900 shadow-xl rounded-2xl overflow-hidden ">
       <div className="px-8 py-6">
         <div className="flex items-center mb-6">
-          <img src={googleMeetLogo} alt="Google Meet" className="w-10 h-10 mr-3" />
+          <img
+            src={googleMeetLogo}
+            alt="Google Meet"
+            className="w-10 h-10 mr-3"
+          />
           <h2 className="text-3xl font-semibold text-white">Google Meet</h2>
         </div>
         <div className="mb-6">
@@ -32,7 +36,7 @@ const GoogleMeetWidget = () => {
             placeholder="Enter Google Meet link"
             value={meetLink}
             onChange={handleLinkChange}
-            className="border border-gray-300 rounded-full px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="border border-gray-300 rounded-full px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300 ease-in-out transform hover:scale-105"
           />
         </div>
         <div className="mb-6">
@@ -41,7 +45,7 @@ const GoogleMeetWidget = () => {
             placeholder="Enter Meeting ID"
             value={meetID}
             onChange={handleIDChange}
-            className="border border-gray-300 rounded-full px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="border border-gray-300 rounded-full px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300 ease-in-out transform hover:scale-105"
           />
         </div>
         <button

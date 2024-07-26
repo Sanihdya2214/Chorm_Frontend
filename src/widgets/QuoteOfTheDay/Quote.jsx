@@ -63,18 +63,26 @@ const QuoteOfTheDay = () => {
   }, [displayedText, typing, quote, quotes, currentIndex]);
 
   return (
-    <div className="text-center mt-8">
+    <div className="text-center mt-8 max-w-xl mx-auto transition-transform transform hover:scale-105 duration-300">
       {loading ? (
         <p className="text-center text-xl">Loading...</p>
       ) : error ? (
         <p className="text-center text-red-500 text-xl">{error}</p>
       ) : (
         <>
-          <h1 className="text-4xl font-bold italic mb-4">
+          <h1
+            className="text-3xl text-orange-300 font-bold italic mb-4 break-words"
+            style={{ fontFamily: "'Dancing Script', cursive" }}
+          >
             &ldquo;{displayedText}&rdquo;
           </h1>
           {!typing && displayedText.length === 0 && (
-            <h2 className="text-2xl font-medium">— {author}</h2>
+            <h2
+              className="text-2xl font-medium"
+              style={{ fontFamily: "'Dancing Script', cursive" }}
+            >
+              — {author}
+            </h2>
           )}
         </>
       )}

@@ -47,16 +47,19 @@ const Weather = () => {
   };
 
   return (
-    <div className="card flex flex-col items-center rounded-2xl w-full h-auto p-4 bg-gradient-to-br from-gray-900 to-blue-700 shadow-lg transition ease-out duration-300">
+    <div className="card flex flex-col transition-transform transform hover:scale-105 duration-300 items-center rounded-2xl w-full h-full p-4 bg-gradient-to-br from-gray-900 to-blue-700 shadow-lg transition ease-out duration-300">
+      {/* Weather Heading */}
+      <h1 className="text-3xl font-extrabold text-white mb-6 mt-2">Weather</h1>
+
       <div
         className={`search-box ${
           showBar ? "bar-shown" : "bar-not-shown"
-        } bg-white bg-opacity-50 rounded-lg transition ease-in-out duration-300 flex items-center justify-center w-full relative`}
+        } bg-white bg-opacity-50 rounded-2xl transition ease-in-out duration-300 flex items-center justify-center w-full relative`}
       >
         <form onSubmit={search} className="flex w-full">
           <input
             type="text"
-            className="search-bar p-4 flex-1 bg-none border-none outline-none rounded-lg text-gray-800 text-lg transition ease duration-200"
+            className="search-bar p-4 flex-1 bg-none border-none outline-none rounded-lg text-gray-800 text-lg transition duration-300 ease-in-out transform hover:scale-105"
             placeholder="Search for a city"
             onChange={(e) => setQuery(e.target.value)}
             ref={setInputRefFocus}

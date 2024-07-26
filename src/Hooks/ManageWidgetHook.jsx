@@ -12,6 +12,8 @@ const useWidgetManager = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [widgetToRemove, setWidgetToRemove] = useState(null);
   const [widgetToReenable, setWidgetToReenable] = useState(null);
+  const [showGoogleForm, setShowGoogleForm] = useState(true);
+
 
   const openDropdown = (event) => {
     event.preventDefault();  // Prevent default behavior
@@ -40,6 +42,9 @@ const useWidgetManager = () => {
         break;
       case "Calender":
         setShowCalender(false);
+        break;
+      case "Google-Form":
+        setShowGoogleForm(false);
         break;
       case "Google-Slide":
         setShowGoogleSlide(false);
@@ -70,6 +75,9 @@ const useWidgetManager = () => {
       case "Weather":
         setShowWeather(true);
         break;
+      case "Google-Form":
+        setShowGoogleForm(true);
+        break;
       case "Calender":
         setShowCalender(true);
         break;
@@ -91,6 +99,7 @@ const useWidgetManager = () => {
     showGoogleSlide,
     showIssueTracker,
     showGoogleKeep,
+    showGoogleForm,
     isDropdownOpen,
     widgetToRemove,
     widgetToReenable,
