@@ -13,7 +13,7 @@ const QuoteOfTheDay = () => {
   useEffect(() => {
     const getQuotes = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/Quotes/quote"); // Update with your actual backend URL
+        const response = await fetch("http://localhost:3000/api/Quotes/quote"); 
         const data = await response.json();
         if (data && data.length > 0) {
           setQuotes(data);
@@ -39,15 +39,15 @@ const QuoteOfTheDay = () => {
       if (displayedText.length < quote.length) {
         typingTimeout = setTimeout(() => {
           setDisplayedText(quote.slice(0, displayedText.length + 1));
-        }, 100); // Adjust typing speed here
+        }, 100); // Adjusting typing speed 
       } else {
-        typingTimeout = setTimeout(() => setTyping(false), 3000); // Pause before deleting
+        typingTimeout = setTimeout(() => setTyping(false), 3000); // Pausing before deleting
       }
     } else {
       if (displayedText.length > 0) {
         deletingTimeout = setTimeout(() => {
           setDisplayedText(displayedText.slice(0, -1));
-        }, 50); // Adjust deleting speed here
+        }, 50); // Adjusting deleting speed 
       } else {
         setTyping(true);
         setCurrentIndex((prevIndex) => (prevIndex + 1) % quotes.length);

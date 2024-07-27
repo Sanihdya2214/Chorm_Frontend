@@ -14,11 +14,11 @@ import useWidgetManager from "./Hooks/ManageWidgetHook";
 import DailyGrowthChecklist from "./widgets/DGC/DailyGrowth";
 import TimeWidget from "./widgets/Time/Real_Time";
 import AnnouncementBoard from "./widgets/Annoucements/Announcements";
+//import PollForm from "./widgets/Polls/Pollform";
 
 
-// Import the new widget
 
-// Import the background image
+// Importing the background image
 import backgroundImage from "./assests/Bg_image.jpeg"; // Adjust the path as needed
 import GoogleFormWidget from "./widgets/GoogleFomWidget/GoogleFormWidget";
 
@@ -317,10 +317,12 @@ const App = () => {
           {/* <div className="rounded-lg shadow-md">
             <PollForm addPoll={addPoll} className="h-64" />
           </div> */}
+          
         </div>
       </div>
     </div>
   );
+
 };
 
 export default App;

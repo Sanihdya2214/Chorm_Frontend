@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import googleMeetLogo from '../../assests/google-meet-icon.png'; // Ensure the path is correct
+import googleMeetLogo from '../../assests/google-meet-icon.png'; 
 
 const GoogleMeetWidget = () => {
   const [meetLink, setMeetLink] = useState('');

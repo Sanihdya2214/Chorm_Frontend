@@ -6,7 +6,7 @@ const TimeWidget = () => {
   useEffect(() => {
     const updateTime = () => setTime(new Date());
     const intervalId = setInterval(updateTime, 1000);
-    return () => clearInterval(intervalId); // Clean up interval on unmount
+    return () => clearInterval(intervalId); 
   }, []);
 
   const formatTime = (date) => {

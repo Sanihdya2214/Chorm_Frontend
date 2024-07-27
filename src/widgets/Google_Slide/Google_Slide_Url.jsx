@@ -21,15 +21,15 @@ const GoogleSlidesWidget = () => {
 
   return (
     <div className="relative flex flex-col transition-transform transform hover:scale-105 duration-300 items-center bg-gradient-to-r from-teal-400 to-blue-900 justify-center rounded-2xl w-85 h-full p-4">
-      {/* Logo Section */}
+     
       <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
         <img src={logo} alt="Logo" className="w-16 h-auto" />{" "}
-        {/* Reduced size */}
+      
       </div>
 
       <h2 className="text-white text-2xl font-semibold mb-4 mt-20">
         {" "}
-        {/* Increased margin-top */}
+       
         Google Slides Presentation
       </h2>
 

@@ -5,7 +5,7 @@ const PollList = ({ polls, setPolls }) => {
   const [votedPolls, setVotedPolls] = useState({});
 
   useEffect(() => {
-    // Load voted polls from local storage or initialize an empty object
+   
     const storedVotes = JSON.parse(localStorage.getItem("votedPolls")) || {};
     setVotedPolls(storedVotes);
   }, []);
@@ -13,10 +13,10 @@ const PollList = ({ polls, setPolls }) => {
   const vote = async (pollId, optionIndex) => {
     // Check if user has already voted for this poll
     if (votedPolls[pollId]) {
-      return; // User has already voted
+      return; // User has already voted if this checklist passed
     }
 
-    // Make a POST request to register the vote
+    // Making a POST request to register the vote
     await fetch("http://localhost:3000/api/Polls/vote", {
       method: "POST",
       headers: {
@@ -30,7 +30,7 @@ const PollList = ({ polls, setPolls }) => {
     const updatedPolls = await response.json();
     setPolls(updatedPolls);
 
-    // Update local state and store the voted poll
+    // Updated local state and store the voted poll
     setVotedPolls((prev) => ({ ...prev, [pollId]: true }));
     localStorage.setItem(
       "votedPolls",
@@ -73,7 +73,7 @@ const PollList = ({ polls, setPolls }) => {
                 </div>
                 <button
                   onClick={() => vote(poll._id, index)}
-                  disabled={votedPolls[poll._id]} // Disable button if already voted
+                  disabled={votedPolls[poll._id]} // Disabling button if already voted
                   className={`mt-2 ${
                     votedPolls[poll._id]
                       ? "bg-gray-400 cursor-not-allowed"

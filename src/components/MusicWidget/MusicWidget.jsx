@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import MusicLogo from "../../assests/MusicLogo.jpg"; // Import your logo image from assets
+import MusicLogo from "../../assests/MusicLogo.jpg"; 
 
 const MusicWidget = () => {
-  // Define your list of songs with URLs and titles
+  
   const songs = [
     {
       url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
@@ -65,7 +65,7 @@ const MusicWidget = () => {
           className="w-40 h-40 rounded-full shadow-md object-cover"
         />
         <img
-          src={MusicLogo} // Use the imported image from assets
+          src={MusicLogo} 
           alt="Music Logo"
           className="absolute inset-0 w-36 h-36 object-cover rounded-full"
           style={{

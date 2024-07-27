@@ -53,14 +53,14 @@ const ChatWidget = () => {
         onChange={(e) => setMessage(e.target.value)}
         className="w-full p-1 border border-gray-300 rounded mb-4 transition duration-300 ease-in-out transform hover:scale-105"
         placeholder="Type your message here..."
-        rows="3" // Adjust the number of visible rows if needed
+        rows="3" 
       />
       <button
         onClick={handleSendMessage}
         className={`px-4 py-2 text-white rounded transition duration-300 ease-in-out transform hover:scale-105 ${
           loading ? "bg-gray-500" : "bg-green-500"
         } `}
-        disabled={loading} // Disable the button while loading
+        disabled={loading} // Disabling the button while loading
       >
         {loading ? <ClipLoader size={20} color="#ffffff" /> : "Send"}
       </button>
@@ -74,7 +74,7 @@ const ChatWidget = () => {
           <ReactTypingEffect
             text={response}
             speed={50}
-            eraseDelay={500000} // Prevent it from erasing the text
+            eraseDelay={500000} // Preventing it from erasing the text
             displayTextRenderer={(text) => {
               return <p className="text-white whitespace-pre-wrap">{text}</p>;
             }}

@@ -1,7 +1,7 @@
 import React from "react";
 
 const GoogleCalendarWidget = () => {
-  // Hard-coded Calendar ID for testing
+  
   const calendarId = "sanidhyaagarwal16%40gmail.com&ctz=Asia%2FKolkata";
   const calendarUrl = `https://calendar.google.com/calendar/embed?src=${calendarId}`;
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid"; // For generating unique IDs
+import { v4 as uuidv4 } from "uuid"; // using v4 For generating unique IDs
 
 const GoogleKeepWidget = () => {
   const [notes, setNotes] = useState([]);
@@ -12,7 +12,7 @@ const GoogleKeepWidget = () => {
     if (newNote.trim()) {
       setNotes([...notes, { id: uuidv4(), text: newNote, color: noteColor }]);
       setNewNote("");
-      setNoteColor("#ffffff"); // Reset color to default
+      setNoteColor("#ffffff"); 
       setMessage("Note added successfully!");
       setMessageTextColor(
         noteColor === "#ffffff" ? "text-black" : "text-white"
@@ -61,7 +61,7 @@ const GoogleKeepWidget = () => {
       )}
       <div className="w-full flex flex-wrap gap-2 overflow-y-auto max-h-[calc(100%-10rem)]">
         {" "}
-        {/* Adjust max height as needed */}
+       
         {notes.map((note) => (
           <div
             key={note.id}
